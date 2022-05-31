@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">KryAp</string>
+    <string name="title_home">Главная</string>
+    <string name="title_dashboard">Информация</string>
+    <string name="title_notifications">История</string>
+    <string name="write_password">Введите пароль</string>
+    <string name="login_password">ВОЙТИ</string>
+    <string name="registration_login">Логин</string>
+    <string name="registration_password_app">Пароль для приложения</string>
+    <string name="registration_password_wallet">Пароль для кошелька</string>
+    <string name="registration">РЕГИСТРАЦИЯ</string>
+    <string name="registration_btn">Зарегистрироваться</string>
+    <string name="wallet_directory">Путь в памяти телефона для доступа к кошельку. Сохраните для восстановления данных</string>
+    <string name="my_active">Мои активы</string>
+    <string name="my_profile">Мой профиль</string>
+    <string name="my_balance">Мой баланс</string>
+    <string name="eth_address">Блокчейн адресс</string>
+    <string name="wallet_creation">Создать кошелек</string>
+    <string name="history_transaction">История транзакций</string>
+    <string name="add_contact">Добавить контакт</string>
+    <string name="contacts">Контакты</string>
+</resources>

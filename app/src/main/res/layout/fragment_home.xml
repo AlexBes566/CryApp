@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.HomeFragment">
+
+    <TextView
+        android:id="@+id/text_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="@string/my_active"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textColor="@color/white"
+        android:background="@drawable/radius_gradient_45"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/my_data"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/radius_gradient_45"
+        android:scaleType="matrix"
+        android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_home"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="28dp"
+        android:text="@string/my_active"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/my_data"
+        app:layout_constraintStart_toStartOf="@+id/my_data" />
+
+    <ImageButton
+        android:id="@+id/my_balance_btn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="60dp"
+        android:textAlignment="viewStart"
+        android:background="@drawable/radius_gradient_45"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_data"/>
+
+    <TextView
+        android:id="@+id/balance_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Баланс кошелька"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/my_balance_btn"
+        app:layout_constraintStart_toStartOf="@+id/my_balance_btn"
+        app:layout_constraintTop_toTopOf="@+id/my_balance_btn"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="Нажмите кнопку"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/my_balance_btn"
+        app:layout_constraintEnd_toEndOf="@+id/my_balance_btn"
+        app:layout_constraintTop_toTopOf="@+id/my_balance_btn"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageButton
+        android:id="@+id/add_username"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/radius_gradient_45"
+        app:layout_constraintTop_toBottomOf="@+id/my_balance_btn"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <TextView
+        android:id="@+id/add_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Добавить контакт"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/add_username"
+        app:layout_constraintEnd_toEndOf="@+id/add_username"
+        app:layout_constraintStart_toStartOf="@+id/add_username"
+        app:layout_constraintTop_toTopOf="@+id/add_username" />
+
+    <ImageButton
+        android:id="@+id/send_transaction"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/radius_gradient_45"
+        app:layout_constraintTop_toBottomOf="@+id/add_username"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <TextView
+        android:id="@+id/send_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Перевести средства"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/send_transaction"
+        app:layout_constraintEnd_toEndOf="@+id/send_transaction"
+        app:layout_constraintStart_toStartOf="@+id/send_transaction"
+        app:layout_constraintTop_toTopOf="@+id/send_transaction" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:indeterminateTint="@color/white"
+        android:indeterminateTintMode="src_in"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/balance"
+        app:layout_constraintEnd_toEndOf="@+id/balance"
+        app:layout_constraintStart_toStartOf="@+id/balance"
+        app:layout_constraintTop_toTopOf="@+id/balance" />
+
+    <ImageButton
+        android:id="@+id/contacts"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/radius_gradient_45"
+        app:layout_constraintTop_toBottomOf="@+id/send_transaction"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <TextView
+        android:id="@+id/contacts_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contacts"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/contacts"
+        app:layout_constraintEnd_toEndOf="@+id/contacts"
+        app:layout_constraintStart_toStartOf="@+id/contacts"
+        app:layout_constraintTop_toTopOf="@+id/contacts" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
