@@ -55,8 +55,8 @@ public class AddContactActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 create_contact();
-                //Intent intent = new Intent(AddContactActivity.this, MainActivity.class);
-                //startActivity(intent);
+                Intent intent = new Intent(AddContactActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -70,7 +70,7 @@ public class AddContactActivity extends AppCompatActivity {
         sqldb.insertDB(db, contact, block_address);
 
         //Проверка на то, что контакт добавлен в базу данных.
-        Cursor data = sqldb.read_data_base(db);
+        /*Cursor data = sqldb.read_data_base(db);
         if(data.moveToFirst()){
             String a1 ="";
             int idColIndex = data.getColumnIndex("id");
@@ -83,6 +83,6 @@ public class AddContactActivity extends AppCompatActivity {
                 a1 = a1 + all_data +  "/n";
             } while (data.moveToNext());
             vyhod.setText(a1);
-        }
+        } */
     }
 }

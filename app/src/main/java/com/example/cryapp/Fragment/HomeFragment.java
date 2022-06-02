@@ -14,7 +14,7 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 
 import com.example.cryapp.AddContactActivity;
-import com.example.cryapp.ContactsActivity;
+import com.example.cryapp.ContactsListActivity;
 import com.example.cryapp.MainActivity;
 import com.example.cryapp.R;
 
@@ -65,7 +65,7 @@ public class HomeFragment extends Fragment{
         });
 
         contacts.setOnClickListener(view1 -> {
-            Intent intent = new Intent(this.getActivity(), ContactsActivity.class);
+            Intent intent = new Intent(this.getActivity(), ContactsListActivity.class);
             startActivity(intent);
         });
 

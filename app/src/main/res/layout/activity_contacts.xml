@@ -4,22 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ContactsActivity">
+    android:background="@color/teal_700"
+    tools:context=".ContactsListActivity">
 
     <TextView
         android:id="@+id/text_contacts"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_height="60dp"
         android:text="@string/contacts"
-        android:textAlignment="center"
+        android:gravity="center"
         android:textColor="@color/white"
         android:textSize="30dp"
-        android:background="@drawable/radius_gradient_45"
-        android:layout_marginHorizontal="25dp"
+        android:background="@drawable/gradient_45"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/back_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_baseline_arrow_back_ios_24"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_contacts"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text_contacts" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/contacts_recyclerList"

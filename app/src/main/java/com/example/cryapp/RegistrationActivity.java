@@ -46,7 +46,6 @@ public class RegistrationActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActionBar actionBar = getSupportActionBar();
-        assert actionBar != null;
         actionBar.hide();
         setContentView(R.layout.activity_registration);
         castle.setBouncyCastle();

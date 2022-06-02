@@ -43,26 +43,7 @@ public class DashboardFragment extends Fragment {
         qr_image = view.findViewById(R.id.qr_image);
 
         load_value();
-
-        String content = walletName;
-        QRCodeWriter writer = new QRCodeWriter();
-        try {
-            BitMatrix bitMatrix = writer.encode(content, BarcodeFormat.QR_CODE, 512, 512);
-            int width = bitMatrix.getWidth();
-            int height = bitMatrix.getHeight();
-            Bitmap bmp = Bitmap.createBitmap(width, height, Bitmap.Config.RGB_565);
-            for (int x = 0; x < width; x++) {
-                for (int y = 0; y < height; y++) {
-                    bmp.setPixel(x, y, bitMatrix.get(x, y) ? Color.BLACK : Color.WHITE);
-                }
-            }
-            qr_image.setImageBitmap(bmp);
-        } catch (WriterException e) {
-            e.printStackTrace();
-        }
-
-        //qrCode_creation regedit = new qrCode_creation();
-        //regedit.execute();
+        create_qr_code();
 
         registration_login_1.setText(login);
         password_wallet_1.setText(password_app_string);
@@ -77,34 +58,29 @@ public class DashboardFragment extends Fragment {
         login = results.getString("login");
         password_app_string = results.getString("password_app_string");
         walletName = results.getString("walletName");
+        String[] sub = walletName.split("--");
+        walletName = sub[2];
+        String[] sub2 = walletName.split("\\.");
+        walletName = sub2[0];
     }
 
-   /* private class qrCode_creation extends AsyncTask<String, String, Bitmap>{
-        @Override
-        protected Bitmap doInBackground(String... strings) {
-            Bitmap bmp = null;
-            load_value();
+    public void create_qr_code(){
+        QRCodeWriter writer = new QRCodeWriter();
+        try {
             String content = walletName;
-            QRCodeWriter writer = new QRCodeWriter();
-            try {
-                BitMatrix bitMatrix = writer.encode(content, BarcodeFormat.QR_CODE, 512, 512);
-                int width = bitMatrix.getWidth();
-                int height = bitMatrix.getHeight();
-                bmp = Bitmap.createBitmap(width, height, Bitmap.Config.RGB_565);
-                for (int x = 0; x < width; x++) {
-                    for (int y = 0; y < height; y++) {
-                        bmp.setPixel(x, y, bitMatrix.get(x, y) ? Color.BLACK : Color.WHITE);
-                    }
+            BitMatrix bitMatrix = writer.encode(content, BarcodeFormat.QR_CODE, 512, 512);
+            int width = bitMatrix.getWidth();
+            int height = bitMatrix.getHeight();
+            Bitmap bmp = Bitmap.createBitmap(width, height, Bitmap.Config.RGB_565);
+            for (int x = 0; x < width; x++) {
+                for (int y = 0; y < height; y++) {
+                    bmp.setPixel(x, y, bitMatrix.get(x, y) ? Color.BLACK : Color.WHITE);
                 }
-            } catch (WriterException e) {
-                e.printStackTrace();
             }
-            return bmp;
-        }
-
-        protected void onPostExecute (Bitmap bmp){
             qr_image.setImageBitmap(bmp);
+        } catch (WriterException e) {
+            e.printStackTrace();
         }
-    } */
+    }
 
 }

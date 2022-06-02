@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.example.cryapp.Adapters.Contacts;
+
 public class SQLDB extends SQLiteOpenHelper {
 
     public static final String TABLE_NAME = "CONTACTS"; //название таблицы
@@ -42,7 +44,14 @@ public class SQLDB extends SQLiteOpenHelper {
         return cursor;
     }
 
-    public void delete_row_data_base(SQLiteDatabase db, String login){
-        db.delete(TABLE_NAME, "LOGIN = ?", new String[]{login});
+    public void delete_row_data_base(SQLiteDatabase db, String id){
+        db.delete(TABLE_NAME, "id = ?", new String[]{id});
+    }
+
+    public Cursor search(SQLiteDatabase db, String position, String keyword){
+        String query = "SELECT LOGIN FROM " +  TABLE_NAME + " WHERE " + position + " = ?";
+        String[] selectArgs = {keyword};
+        Cursor cursor = db.rawQuery(query,selectArgs);
+        return cursor;
     }
 }

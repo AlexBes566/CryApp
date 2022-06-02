@@ -1,4 +1,4 @@
-package com.example.cryapp.Adapters;
+package com.example.cryapp;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,16 +9,23 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.cryapp.R;
+import com.example.cryapp.Adapters.Contacts;
 
 import java.util.List;
 
 public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ViewHolder> {
 
+
+    interface OnContactsClickListener{
+        void onContactsClick(Contacts contacts, int position, String identificator, String contact_name_text, String contact_blockchain_address_text);
+    }
+
     private final LayoutInflater inflater;
     private final List<Contacts> contactsList;
+    private final OnContactsClickListener onClickListener;
 
-    public ContactsAdapter(Context context, List<Contacts> contactsList){
+    public ContactsAdapter(Context context, List<Contacts> contactsList, OnContactsClickListener onClickListener){
+        this.onClickListener = onClickListener;
         this.contactsList = contactsList;
         this.inflater = LayoutInflater.from(context);
     }
@@ -35,6 +42,12 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ViewHo
         Contacts contacts = contactsList.get(position);
         holder.contact_name.setText(contacts.getContact_name());
         holder.contact_blockchain_address.setText(contacts.getContact_blockchain_address());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onClickListener.onContactsClick(contacts, holder.getAdapterPosition(),contacts.getIdentificator(), contacts.getContact_name(), contacts.getContact_blockchain_address());
+            }
+        });
     }
 
     @Override

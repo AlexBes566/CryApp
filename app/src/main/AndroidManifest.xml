@@ -14,7 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CryApp" >
         <activity
-            android:name=".ContactsActivity"
+            android:name=".ContactInformationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ContactsListActivity"
             android:exported="false" />
         <activity
             android:name=".AddContactActivity"

@@ -4,19 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/teal_700"
     tools:context=".Fragment.DashboardFragment">
 
     <TextView
         android:id="@+id/text_dashboard"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_height="60dp"
         android:text="@string/my_profile"
-        android:textAlignment="center"
+        android:gravity="center"
         android:textColor="@color/white"
         android:textSize="30dp"
-        android:background="@drawable/radius_gradient_45"
-        android:layout_marginHorizontal="25dp"
+        android:background="@drawable/gradient_45"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -55,6 +54,7 @@
         android:layout_marginHorizontal="25dp"
         android:layout_marginTop="40dp"
         android:textColor="@color/black"
+        android:background="@drawable/radius_15"
         android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -83,6 +83,7 @@
         android:layout_marginTop="40dp"
         android:textSize="25dp"
         android:textColor="@color/black"
+        android:background="@drawable/radius_15"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -110,6 +111,7 @@
         android:layout_marginTop="40dp"
         android:textSize="25dp"
         android:textColor="@color/black"
+        android:background="@drawable/radius_15"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />

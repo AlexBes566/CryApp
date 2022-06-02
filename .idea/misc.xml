@@ -5,8 +5,10 @@
       <map>
         <entry key="..\:/Users/aleksandr.bessonov/AndroidStudioProjects/CryApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3195" />
         <entry key="..\:/Users/aleksandr.bessonov/AndroidStudioProjects/CryApp/app/src/main/res/drawable/camera.xml" value="0.3185" />
+        <entry key="..\:/Users/aleksandr.bessonov/AndroidStudioProjects/CryApp/app/src/main/res/drawable/gradient_135.xml" value="0.3675" />
         <entry key="..\:/Users/aleksandr.bessonov/AndroidStudioProjects/CryApp/app/src/main/res/drawable/gradient_45.xml" value="0.3195" />
         <entry key="..\:/Users/aleksandr.bessonov/AndroidStudioProjects/CryApp/app/src/main/res/drawable/gradient_90.xml" value="0.1" />
+        <entry key="..\:/Users/aleksandr.bessonov/AndroidStudioProjects/CryApp/app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.3675" />
         <entry key="..\:/Users/aleksandr.bessonov/AndroidStudioProjects/CryApp/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.3195" />
         <entry key="..\:/Users/aleksandr.bessonov/AndroidStudioProjects/CryApp/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.3195" />
         <entry key="..\:/Users/aleksandr.bessonov/AndroidStudioProjects/CryApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3195" />
@@ -17,11 +19,13 @@
         <entry key="..\:/Users/aleksandr.bessonov/AndroidStudioProjects/CryApp/app/src/main/res/drawable/radius_15_purple.xml" value="0.3075" />
         <entry key="..\:/Users/aleksandr.bessonov/AndroidStudioProjects/CryApp/app/src/main/res/drawable/radius_15_teal.xml" value="0.3185" />
         <entry key="..\:/Users/aleksandr.bessonov/AndroidStudioProjects/CryApp/app/src/main/res/drawable/radius_gradient.xml" value="0.3195" />
+        <entry key="..\:/Users/aleksandr.bessonov/AndroidStudioProjects/CryApp/app/src/main/res/drawable/radius_gradient_45.xml" value="0.3675" />
         <entry key="..\:/Users/aleksandr.bessonov/AndroidStudioProjects/CryApp/app/src/main/res/drawable/radius_gradient_90.xml" value="0.311" />
         <entry key="..\:/Users/aleksandr.bessonov/AndroidStudioProjects/CryApp/app/src/main/res/drawable/radius_green.xml" value="0.311" />
         <entry key="..\:/Users/aleksandr.bessonov/AndroidStudioProjects/CryApp/app/src/main/res/drawable/vector_ruble.xml" value="0.1" />
         <entry key="..\:/Users/aleksandr.bessonov/AndroidStudioProjects/CryApp/app/src/main/res/layout/activity_add_contact.xml" value="0.3009833262077811" />
         <entry key="..\:/Users/aleksandr.bessonov/AndroidStudioProjects/CryApp/app/src/main/res/layout/activity_contact.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/aleksandr.bessonov/AndroidStudioProjects/CryApp/app/src/main/res/layout/activity_contact_information.xml" value="0.3009833262077811" />
         <entry key="..\:/Users/aleksandr.bessonov/AndroidStudioProjects/CryApp/app/src/main/res/layout/activity_contacts.xml" value="0.3009833262077811" />
         <entry key="..\:/Users/aleksandr.bessonov/AndroidStudioProjects/CryApp/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/Users/aleksandr.bessonov/AndroidStudioProjects/CryApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
